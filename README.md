@@ -1,6 +1,6 @@
-# Управление курсом валюты
+# Currency rate management
 
-Используемые технологии:
+Used technologies:
 
 Backend:
   - Ruby 2.6.5
