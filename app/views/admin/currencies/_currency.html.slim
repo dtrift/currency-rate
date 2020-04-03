@@ -1,0 +1,24 @@
+tr
+  td.col-md-2.title
+    = currency.title
+
+  td.col-md-2.current_rate
+    = currency.current_rate
+    ' ₽
+
+  td.col-md-2.tomorrow_rate
+    = currency.tomorrow_rate
+    ' ₽
+
+  td.col-md-2.force_end_time
+    - unless currency.force_time_is_over?
+      = currency.force_end_time.to_s(:short)
+    - else
+      a Completed
+
+  td.col-md-2
+    - if currency.remaining_time > 0
+      = content_tag :span, '', class: "timer",
+        data: { start_value: currency.remaining_time }
+    - else
+      a Completed

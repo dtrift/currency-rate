@@ -1,0 +1,22 @@
+.container.rate.col-md-8.mt-2
+  span.card.border.border-light
+    .card-header
+      h3 Currencies Rate
+    .card-body
+      table.table
+        tr
+          th.col-md-2 Currency
+          th.col-md-2 Today
+          th.col-md-2 Tomorrow
+          th.col-md-2 Force
+          th.col-md-2 Timer
+          
+          = render @currencies
+      hr
+
+.container.col-md-8.offset-md-2.mt-2.mb-2
+  span.card.border.border-light
+    .card-header
+      h3 Currency Management
+    .card-body
+      = render 'form'

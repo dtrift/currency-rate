@@ -1,0 +1,26 @@
+.currency-form
+  = form_with model: @currency, method: :patch, local: true, class: "form-group" do |f|
+    = render 'shared/errors', resource: @currency
+
+    p
+      = f.label :select_currency
+      ':
+      = f.collection_select :currency_id, Currency.all, :id, :title,
+                                          class: "custom-select mr-sm-6"
+
+    p
+      = f.label :force_rate
+      ':
+      = f.text_field :force_rate, class: "form-control mr-sm-6",
+                     placeholder: 'Put like this: 55.7777'
+
+    p
+      = f.label :force_end_time
+      ':
+      = f.datetime_local_field :force_end_time, class: "form-control",
+                               placeholder: 'day.month.year hour:minute'
+    hr
+
+    = link_to 'Home page', root_path, class: 'btn btn-primary mr-1 mt-1'
+    / = link_to 'Stop forcing', '#', class: 'btn btn-danger mr-1 mt-1'
+    = f.submit 'Force currency', class: 'btn btn-success mt-1'
