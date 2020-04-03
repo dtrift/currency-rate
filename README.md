@@ -1,24 +1,24 @@
-# README
+# Управление курсом валюты
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Используемые технологии:
 
-Things you may want to cover:
+Backend:
+  - Ruby 2.6.5
+  - Rails 5.2.4.2
+  - PostgreSQL
+  - ActionCable
+  - ActiveJob
+  - Redis
+  - Sidekiq
+  - Whenever
 
-* Ruby version
+Frontend:
+  - Slim
+  - Bootstrap 4
+  - JavaScript/CoffeeScript
 
-* System dependencies
+Testing:
+  - RSpec
+  - Shoulda Matchers
+  - Factory Bot
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
