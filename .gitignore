@@ -33,3 +33,5 @@
 
 # Mac OS Files
 *.DS_Store
+
+dump.rdb
