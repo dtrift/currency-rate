@@ -43,6 +43,8 @@ gem 'slim-rails'
 # Background Job
 gem 'whenever', require: false
 gem 'sidekiq', '< 6'
+gem 'momentjs-rails' 
+gem 'bootstrap4-datetime-picker-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

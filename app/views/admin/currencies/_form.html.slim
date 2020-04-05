@@ -17,8 +17,14 @@
     p
       = f.label :force_end_time
       ':
-      = f.datetime_local_field :force_end_time, class: "form-control",
-                               placeholder: 'day.month.year hour:minute'
+      div class="input-group date" id="datetimepicker2" data-target-input="nearest"
+        = f.text_field :force_end_time, class: "form-control datetimepicker-input",
+                                        data: { target: "#datetimepicker2" },
+                                        placeholder: 'day.month.year hour:minute'
+                                        
+        div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker"
+          div class="input-group-text"
+            i class="fas fa-calendar-plus"
     hr
 
     = link_to 'Home page', root_path, class: 'btn btn-primary mr-1 mt-1'
