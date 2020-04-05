@@ -18,7 +18,7 @@ module.exports = function(api) {
   return {
     presets: [
       isTestEnv && [
-        '@babel/preset-env',
+        require('@babel/preset-env').default,
         {
           targets: {
             node: 'current'
@@ -26,7 +26,7 @@ module.exports = function(api) {
         }
       ],
       (isProductionEnv || isDevelopmentEnv) && [
-        '@babel/preset-env',
+        require('@babel/preset-env').default,
         {
           forceAllTransforms: true,
           useBuiltIns: 'entry',
@@ -34,7 +34,8 @@ module.exports = function(api) {
           modules: false,
           exclude: ['transform-typeof-symbol']
         }
-      ]
+      ],
+      '@vue/babel-preset-jsx'
     ].filter(Boolean),
     plugins: [
       'babel-plugin-macros',
