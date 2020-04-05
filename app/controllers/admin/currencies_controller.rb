@@ -3,7 +3,7 @@ class Admin::CurrenciesController < ApplicationController
   after_action :update_rate, only: %i[update]
 
   def index
-    @currencies = Currency.all
+    @currencies ||= Currency.all
   end
 
   def update

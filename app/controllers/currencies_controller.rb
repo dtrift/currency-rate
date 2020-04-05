@@ -1,5 +1,5 @@
 class CurrenciesController < ApplicationController
   def index
-    @currencies = Currency.all
+    @currencies ||= Currency.all
   end
 end

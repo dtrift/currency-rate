@@ -1,5 +1,16 @@
 {
   "name": "rate",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "4.2.2",
+    "@vue/babel-helper-vue-jsx-merge-props": "^1.0.0",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "vue-turbolinks": "^2.1.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  }
 }
